@@ -30,7 +30,7 @@ func getAddr() string {
 func main() {
 	http.Handle("/", http.FileServer(http.Dir("assets")))
 	addr := getAddr()
-	log.Printf("Listening on %s", addr)
+	log.Printf("Listening onn %s", addr)
 	if err := http.ListenAndServe(addr, withLogs(http.DefaultServeMux)); err != nil {
 		log.Fatal(err)
 	}
